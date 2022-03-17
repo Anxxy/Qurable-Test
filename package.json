@@ -5,6 +5,8 @@
   "main": "server.js",
   "license": "MIT",
   "scripts": {
+    "start": "node ./build/server.js",
+    "build": "tsc",
     "postinstall": "tsc",
     "dev": "nodemon --config nodemon.json src/server.ts"
   },
