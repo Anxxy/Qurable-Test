@@ -14,8 +14,6 @@ dotenv.config()
 
 const config = convict(configSchema).getProperties()
 
-console.log(config)
-
 const redisClient = redis.createClient({
   url : `redis://${config.redis.host}:${config.redis.port}`,
   password : config.redis.password
