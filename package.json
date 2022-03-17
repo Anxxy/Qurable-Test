@@ -7,7 +7,11 @@
   "scripts": {
     "start": "tsc && node ./build/server.js",
     "build": "tsc",
+    "postinstall": "tsc",
     "dev": "nodemon --config nodemon.json src/server.ts"
+  },
+  "engines": {
+    "node": "17.6.0"
   },
   "dependencies": {
     "convict": "^6.2.1",
