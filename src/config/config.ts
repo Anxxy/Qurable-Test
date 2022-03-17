@@ -18,7 +18,7 @@ export const configSchema = {
   server: {
     host: {
       format: String,
-      default: 'localhost',
+      default: '0.0.0.0',
       env: 'HOST'
     },
     port: {
