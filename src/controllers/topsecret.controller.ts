@@ -36,15 +36,21 @@ export class TopSecretController implements BaseController {
       satellitesMap.set(satellite.name, satellite);
     }
 
-    try {
-      let satelliteLocations = satellites.map((satellite) => {
-        messages.push(satellitesMap.get(satellite.name).message);
-        return {
-          satellite: satellite,
-          distance: satellitesMap.get(satellite.name).distance
-        };
-      });
+    for (let satellite of satellites) {
+      if (!satellitesMap.has(satellite.name)) {
+        res.status(400).json({ errors: [{ msg: `Missing Satellite name "${satellite.name}"` }] });
+      }
+    }
 
+    let satelliteLocations = satellites.map((satellite) => {
+      messages.push(satellitesMap.get(satellite.name).message);
+      return {
+        satellite: satellite,
+        distance: satellitesMap.get(satellite.name).distance
+      };
+    });
+
+    try {
       res.send({
         position: getLocation(satelliteLocations),
         message: getMessage(messages)
