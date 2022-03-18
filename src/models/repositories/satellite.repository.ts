@@ -1,6 +1,5 @@
-import {Satellite} from '../satellite'
-
-import {SatelliteRepositoryInterface} from './interfaces/satellite.repository'
+import { Satellite } from '../satellite'
+import { SatelliteRepositoryInterface } from './interfaces/satellite.repository'
 
 export class SatelliteRepository implements SatelliteRepositoryInterface {
   satellites = [

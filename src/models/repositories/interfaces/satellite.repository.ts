@@ -1,4 +1,4 @@
-import {Satellite} from '../../satellite'
+import { Satellite } from '../../satellite'
 
 export interface SatelliteRepositoryInterface {
   findAll(): Promise<Satellite[]>

@@ -1,7 +1,7 @@
-import express from 'express'
+import express from 'express';
 
-import {Config} from './config/config'
-import {BaseController} from './controllers/base.controller'
+import { Config } from './config/config';
+import { BaseController } from './controllers/base.controller';
 
 export class App {
   private config: Config;
@@ -25,9 +25,8 @@ export class App {
 
   public listen() {
     this.app.listen(
-        this.config.server.port, this.config.server.host, 511, () => {
-          console.log(`The application is listening on ${
-              this.config.server.host}:${this.config.server.port}!`);
-        });
+      this.config.server.port, this.config.server.host, 511, () => {
+        console.log(`The application is listening on ${this.config.server.host}:${this.config.server.port}!`);
+      });
   }
 }
