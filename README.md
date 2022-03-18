@@ -15,3 +15,69 @@
 ## Deployed server link
 
 - `https://qurable-test.herokuapp.com/`
+
+## Server details
+
+### Paths-UseCases
+
+- **POST:** /topsecret
+
+  - Entrada
+
+    ```json
+    {
+    	"satellites": [
+    		{
+    			"name": "Kenobi",
+    			"distance": 500,
+    			"message": ["Hello", "", "", "is", "Andre"]
+    		},
+    		{
+    			"name": "Skywalker",
+    			"distance": 424.26,
+    			"message": ["", "my", "", "", ""]
+    		},
+    		{
+    			"name": "Sato",
+    			"distance": 707.11,
+    			"message": ["Hello", "", "name", "", ""]
+    		}
+    	]
+    }
+    ```
+
+  - Salida
+
+    ```json
+    {
+    	"position": {
+    		"x": -200,
+    		"y": 200
+    	},
+    	"message": "Hello my name is Andre"
+    }
+    ```
+
+- **POST:** /topsecret_split/{name}
+  - Entrada
+
+    ```json
+    {
+    	"distance": 500,
+    	"message": ["Hello", "", "", "is", "Andre"]
+    }
+    ```
+  
+- **GET:** /topsecret_split
+  
+  - Salida
+  
+    ```json
+    {
+    	"position": {
+    		"x": -200,
+    		"y": 200
+    	},
+    	"message": "Hello my name is Andre"
+    }
+    ```
