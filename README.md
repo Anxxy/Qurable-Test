@@ -22,7 +22,7 @@
 
 - **POST:** /topsecret
 
-  - Entrada
+  - Input
 
     ```json
     {
@@ -46,7 +46,7 @@
     }
     ```
 
-  - Salida
+  - Output
 
     ```json
     {
@@ -59,7 +59,7 @@
     ```
 
 - **POST:** /topsecret_split/{name}
-  - Entrada
+  - Input
 
     ```json
     {
@@ -70,7 +70,7 @@
   
 - **GET:** /topsecret_split
   
-  - Salida
+  - Output
   
     ```json
     {
